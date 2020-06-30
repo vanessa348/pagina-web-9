@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='es' style='height: 100%;'>
+<head>
+    <title>Mis mejores peliculas</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" >
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+            $('.tabs').tabs();
+        });
+    </script>
+</head>
+<body class="indigo lighten-5">
+ 
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Las mejores peliculas</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="{% url 'index' %}">Lista</a></li>
+            <li class="active"><a href="">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <div class="container">
+        <div class="row">
+            <div class="col s4 offset-s4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Hola extraño :)</span>
+                        <p>Si quieres contactarme, aqui te dejo algunas formas...</p>
+                    </div>
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#tab1">Email</a></li>
+                        <li class="tab"><a href="#tab2">Twitter</a></li>
+                        <li class="tab"><a href="#tab3">Telefono</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content grey lighten-4">
+                        <div id="tab1">mailFalso@correo.cl</div>
+                        <div id="tab2">@twitterFalsp</div>
+                        <div id="tab3">111222333444</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
