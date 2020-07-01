@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang= "es" style="height: 100%;">
 <head>
-    <title>mis mejores peliculas</title>
+    <title>Sintomas Covid-19</title>
     {% load static %}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" >
@@ -12,11 +12,49 @@
     <div class="container">
         <div class="row">
             <div class="col s12">
-             <h1 style="text-align: center;">Bienvenido al mejor listado de peliculas</h1>
+             <h1 style="text-align: center;">Bienvenido a la encuesta de sintomas de covid-19</h1>
             </div>
-    
+
+            <div class="col s1 center-align">
+                <img src="{% static 'img/img1.jpg' %}" height="230" />
+            </div> 
+            <div class="col s12">
+                <table>
+                    <thead>
+                      <tr>
+                          <th>Numero</th>
+                          <th>  </th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                        {% for virals in virus %}
+
+                      <tr>
+                        <td><b>{{forloop.counter}}</b></td>
+                        <td>{{virals}}</td>
+                      </tr>
+                      {% endfor %}
+     
+                    </tbody>
+                  </table>
+            </div>
         </div>
     </div>
-</body>
+    <div>
+        <h6>Por favor, si presenta alguno de los síntomas anteriores y vive en Viña del Mar lea el apartado de abajo</h6>
 
+        <div>
+            <h4>Lea con atención</h4>
+            <h4>Si usted presenta más de 3 de estos síntomas o su edad es menor de 6 y mayor de 74 años</h4>
+            <h6>Acuda al centro asistencial de su preferencia. Evite salir de casa. Cuídese</h6>
+        </div>
+
+        <div>
+            <h6>Visite el link con los centros asistenciales más cercanos presionando abajo</h6>
+            <a href=http://127.0.0.1:8000/mapa>link</a>
+            <h5>QUÉDESE EN CASA</h5>
+    </div>
+
+</body>
 </html>
